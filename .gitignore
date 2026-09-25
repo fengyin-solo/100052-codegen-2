@@ -85,3 +85,6 @@ desktop.ini
 *.db
 *.pid
 *.seed
+
+# ===== 资料归档落盘数据（图纸/竣工资料文件本体与元数据）=====
+backend/data/

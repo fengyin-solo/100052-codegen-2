@@ -7,6 +7,7 @@
 from __future__ import annotations
 
 from app.routers import section as router_section
+from app.routers import archive as router_archive
 from app.routers import signal as router_signal
 from app.routers import switch as router_switch
 from app.routers import track as router_track
@@ -25,4 +26,4 @@ from app.routers import verify as router_verify
 from app.routers import shift as router_shift
 from app.routers import assess as router_assess
 
-ROUTERS = [router_section, router_signal, router_switch, router_track, router_interlock, router_atp, router_plan, router_task, router_fault, router_dispose, router_spare, router_measure, router_patrol, router_window, router_alarm, router_verify, router_shift, router_assess]
+ROUTERS = [router_section, router_archive, router_signal, router_switch, router_track, router_interlock, router_atp, router_plan, router_task, router_fault, router_dispose, router_spare, router_measure, router_patrol, router_window, router_alarm, router_verify, router_shift, router_assess]

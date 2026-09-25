@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 import Dashboard from '@/views/Dashboard.vue'
 const Section = () => import('@/views/section/index.vue')
+const Archive = () => import('@/views/archive/index.vue')
 const Signal = () => import('@/views/signal/index.vue')
 const Switch = () => import('@/views/switch/index.vue')
 const Track = () => import('@/views/track/index.vue')
@@ -25,6 +26,7 @@ const router = createRouter({
   routes: [
     { path: '/', name: 'dashboard', component: Dashboard },
     { path: '/section', name: 'section', component: Section },
+    { path: '/archive', name: 'archive', component: Archive },
     { path: '/signal', name: 'signal', component: Signal },
     { path: '/switch', name: 'switch', component: Switch },
     { path: '/track', name: 'track', component: Track },

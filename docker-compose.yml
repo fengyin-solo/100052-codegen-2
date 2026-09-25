@@ -5,9 +5,15 @@ services:
       - "8000:8000"
     environment:
       - APP_ENV=local
+    volumes:
+      # 资料归档的元数据与文件本体落盘在容器内 /srv/app/data，挂卷后重建容器不丢
+      - archive-data:/srv/app/data
   frontend:
     build: ./frontend
     ports:
       - "5173:5173"
     depends_on:
       - backend
+
+volumes:
+  archive-data:

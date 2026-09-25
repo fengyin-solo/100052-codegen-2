@@ -28,6 +28,18 @@ class EntryPayload(BaseModel):
     remark: str | None = None
 
 
+class ArchiveBatchPayload(BaseModel):
+    """资料归档批量上传：items 里每份资料携带元数据与 Base64 文件内容，先校验后确认。"""
+
+    items: list[dict[str, Any]] = Field(default_factory=list)
+
+
+class ArchiveCommitPayload(BaseModel):
+    """凭校验阶段返回的 token 确认入库或放弃本批。"""
+
+    token: str
+
+
 
 class SectionEntry(BaseModel):
     """线路区段明细结构。"""
