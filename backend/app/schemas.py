@@ -244,3 +244,36 @@ class AssessEntry(BaseModel):
     field_5: str | None = None  # 评估人员
     field_6: str | None = None  # 评估结论
     field_7: str | None = None  # 评估状态
+
+class ArchiveEntry(BaseModel):
+    """资料归档明细结构。"""
+
+    field_0: str | None = None  # 资料编号
+    field_1: str | None = None  # 资料名称
+    field_2: str | None = None  # 资料类别
+    field_3: str | None = None  # 所属区段
+    field_4: str | None = None  # 所属车站
+    field_5: str | None = None  # 版本号
+    field_6: str | None = None  # 生效日期
+    field_7: str | None = None  # 资料状态
+
+
+class ArchiveUploadItem(BaseModel):
+    """批量上传时单份资料提交的内容。"""
+
+    资料名称: str | None = None
+    资料类别: str | None = None
+    所属区段: str | None = None
+    所属车站: str | None = None
+    版本号: str | None = None
+    生效日期: str | None = None
+    文件名: str | None = None
+    上传人: str | None = None
+    文件内容: str | None = None
+    备注: str | None = None
+
+
+class ArchiveUploadPayload(BaseModel):
+    """一次批量上传提交的全部资料条目，先校验、确认后才入库。"""
+
+    items: list[ArchiveUploadItem] = Field(default_factory=list)

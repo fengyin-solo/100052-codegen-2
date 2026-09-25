@@ -24,5 +24,6 @@ from app.routers import alarm as router_alarm
 from app.routers import verify as router_verify
 from app.routers import shift as router_shift
 from app.routers import assess as router_assess
+from app.routers import archive as router_archive
 
-ROUTERS = [router_section, router_signal, router_switch, router_track, router_interlock, router_atp, router_plan, router_task, router_fault, router_dispose, router_spare, router_measure, router_patrol, router_window, router_alarm, router_verify, router_shift, router_assess]
+ROUTERS = [router_section, router_signal, router_switch, router_track, router_interlock, router_atp, router_plan, router_task, router_fault, router_dispose, router_spare, router_measure, router_patrol, router_window, router_alarm, router_verify, router_shift, router_assess, router_archive]
